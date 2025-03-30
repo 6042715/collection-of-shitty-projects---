@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clock That's Always Wrong</title>
+    <link rel="stylesheet" href="style/index-style.css">
+    <script src="lib/main.js" defer></script>
+    <script src="lib/options.js" defer></script>
+</head>
+<body>
+    <div id="options">
+        <!-- I could've used PHP, but setting up those servers fucking sucks -->
+        <nav>
+            <p>Standard themes:</p>
+            <button onclick="changeTheme('default')">default theme</button>
+            <button onclick="changeTheme('dark')">dark theme</button>
+            <button onclick="changeTheme('blue')">blue theme</button>
+            <button onclick="changeTheme('red')">red theme</button>
+            <button onclick="changeTheme('green')">green theme</button>
+            <button onclick="changeTheme('purple')">purple theme</button>
+        </nav>
+    </div>
+    <div id="clockHolder">
+        <h1 id="clock"></h1>
+    </div>
+</body>
+</html>

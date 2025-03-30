@@ -1,0 +1,45 @@
+:root{
+    --default-color: black;
+}
+
+@keyframes colonBlink{
+    0%{
+        color: var(--default-color);
+    }
+    50%{
+        color: transparent;
+    }
+    100%{
+        color: var(--default-color);
+    }
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+#clock{
+    display: flex;
+    flex-direction: row;
+    font-size: 3vw;
+}
+/* adds tiny delay to fuck it up! */
+#clock span:nth-child(1){
+    animation: colonBlink 505ms alternate;
+}
+#clock span:nth-child(2){
+    animation: colonBlink 517ms alternate;
+    animation-delay: 10ms;
+}
+#options{
+    position: absolute;
+    top: 3vh;
+    left: 0;
+}
+#options nav{
+    display: flex;
+    flex-direction: column;
+}
